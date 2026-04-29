@@ -1,158 +1,175 @@
-/* Reset & Base Styles */
+/* Reset Dasar */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
 body {
     background-color: #ffffff;
-    color: #333;
     overflow-x: hidden;
-}
-
-.main-container {
-    max-width: 500px; /* Ukuran Mobile-Friendly sesuai poster */
-    margin: 0 auto;
-    padding: 20px;
     position: relative;
+    min-height: 100vh;
 }
 
-/* Animasi Fade In untuk Halaman */
+/* Dekorasi Lingkaran Merah */
+.circle-top-right {
+    position: fixed;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background-color: #e63946;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.circle-bottom-left {
+    position: fixed;
+    bottom: -80px;
+    left: -80px;
+    width: 200px;
+    height: 200px;
+    background-color: #e63946;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* Animasi Fade In Page */
 .fade-in {
-    animation: fadeInPage 2s ease-in-out forwards;
+    animation: fadeInEffect 1.5s ease-in-out;
 }
 
-@keyframes fadeInPage {
+@keyframes fadeInEffect {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
+/* Kontainer Utama */
+.main-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
 /* Header */
 header {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .logo-section {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-weight: bold;
-    font-size: 0.8rem;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .pmi-logo {
     width: 35px;
 }
 
-.welcome-text h1 {
-    font-weight: 400;
-    font-size: 1.5rem;
-    letter-spacing: 2px;
+.header-text {
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.welcome-label {
+    font-style: italic;
+    font-size: 22px;
+    color: #333;
 }
 
 .brand-title {
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 900;
-    line-height: 1.1;
+    line-height: 1;
+    margin-top: 5px;
 }
 
-/* Section Tentang Kami */
-.tentang-kami h3, .title-row h3 {
-    font-weight: 800;
-    border-bottom: 3px solid #cc0000;
-    display: inline-block;
+/* Layout Section */
+.section-container {
+    margin-top: 40px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     margin-bottom: 15px;
 }
 
+.section-header h3 {
+    font-weight: 800;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.red-line {
+    width: 40px;
+    height: 3px;
+    background-color: #e63946;
+}
+
+/* Gambar Tentang Kami */
 .image-card {
     position: relative;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 .main-photo {
     width: 100%;
+    height: auto;
     display: block;
-    height: 300px;
-    object-fit: cover;
 }
 
 .overlay {
     position: absolute;
     bottom: 0;
-    background: linear-gradient(transparent, rgba(0,0,0,0.8));
-    color: white;
+    width: 100%;
     padding: 20px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    color: white;
 }
 
 .overlay h4 {
-    font-size: 1.3rem;
+    font-size: 18px;
     margin-bottom: 5px;
 }
 
 .overlay p {
-    font-size: 0.75rem;
+    font-size: 11px;
     opacity: 0.8;
 }
 
-/* Visi & Misi Styles */
-.visi-misi-container {
-    margin-top: 30px;
-}
-
+/* Visi Misi Cards */
 .cards-wrapper {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 15px;
-    margin-top: 15px;
 }
 
 .card {
     background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    flex: 1;
-    font-size: 0.8rem;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    font-size: 12px;
+    line-height: 1.4;
 }
 
-.card-header {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    color: #cc0000;
-    margin-bottom: 10px;
-}
-
-.plus-icon {
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-.card h4 {
-    font-weight: 800;
-}
-
-.misi ul {
-    padding-left: 15px;
-}
-
-.misi li {
-    margin-bottom: 8px;
-}
-
-/* Animasi Slide Down Khusus Visi Misi */
+/* Animasi Khusus Visi Misi (Fade In + Scroll Down) */
 .slide-down {
-    animation: slideInDown 1.5s ease-out forwards;
+    animation: slideDownFade 1.5s ease-out forwards;
 }
 
-@keyframes slideInDown {
+@keyframes slideDownFade {
     0% {
         opacity: 0;
-        transform: translateY(-50px);
+        transform: translateY(-30px);
     }
     100% {
         opacity: 1;
@@ -160,22 +177,54 @@ header {
     }
 }
 
-/* Footer */
-footer {
-    margin-top: 40px;
-    text-align: left;
-    font-size: 0.9rem;
-    border-top: 1px solid #eee;
-    padding-top: 20px;
+.card-title {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #333;
+    margin-bottom: 10px;
 }
 
-.highlight {
-    color: #cc0000;
+.plus-icon {
+    color: #e63946;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.highlight-text {
+    color: #e63946;
     font-weight: bold;
 }
 
-.creator {
-    margin-top: 15px;
-    font-size: 0.8rem;
-    color: #777;
+.misi-list {
+    padding-left: 15px;
+}
+
+.misi-list li {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+.footer-bottom {
+    margin-top: 60px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.school-name {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.ig-handle {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.creator-tag {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
 }
