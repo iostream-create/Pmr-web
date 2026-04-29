@@ -1,4 +1,6 @@
-/* Reset Dasar */
+/* =========================================
+   1. RESET & DASAR 
+   ========================================= */
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +15,7 @@ body {
     min-height: 100vh;
 }
 
-/* Dekorasi Lingkaran Merah */
+/* Dekorasi Lingkaran */
 .circle-top-right {
     position: fixed;
     top: -50px;
@@ -36,7 +38,9 @@ body {
     z-index: -1;
 }
 
-/* Animasi */
+/* =========================================
+   2. ANIMASI
+   ========================================= */
 .fade-in {
     animation: fadeInEffect 1.5s ease-in-out;
 }
@@ -51,114 +55,111 @@ body {
 }
 
 @keyframes slideDownFade {
-    0% {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Kontainer */
+/* =========================================
+   3. LAYOUT UTAMA
+   ========================================= */
 .main-container {
     max-width: 600px;
     margin: 0 auto;
     padding: 30px 20px;
 }
 
-/* Header */
-header { margin-bottom: 40px; }
-.logo-section { display: flex; align-items: center; gap: 10px; margin-bottom: 30px; }
-.pmi-logo { width: 35px; }
-.header-text { font-size: 12px; font-weight: bold; line-height: 1.2; }
-.welcome-label { font-size: 22px; color: #333; font-style: italic; }
-.brand-title { font-size: 32px; font-weight: 900; line-height: 1; margin-top: 5px; }
-
-/* Sections */
 .section-container { margin-top: 40px; }
 .section-header { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; }
 .section-header h3 { font-weight: 800; font-size: 18px; }
 .red-line { width: 40px; height: 3px; background-color: #e63946; }
 
-/* Visi Misi & Organisasi */
+/* Teks Merah */
 .highlight-text { color: #e63946; font-weight: bold; }
+
+/* Header */
+.logo-section { display: flex; align-items: center; gap: 10px; margin-bottom: 30px; }
+.pmi-logo { width: 35px; }
+.header-text { font-size: 12px; font-weight: bold; line-height: 1.2; }
+.brand-title { font-size: 32px; font-weight: 900; line-height: 1; margin-top: 5px; }
+
+/* Visi Misi Cards */
 .cards-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
 .card {
     background: white;
     padding: 15px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    font-size: 12px;
+    font-size: 11px;
 }
 
-/* Gaya Struktur Organisasi */
-.org-wrapper {
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    text-align: center;
-}
-
-.org-row {
+/* =========================================
+   4. STRUKTUR ORGANISASI (MODEL BAGAN)
+   ========================================= */
+.org-chart-container {
     display: flex;
-    justify-content: space-around;
-    gap: 10px;
-    margin-top: 15px;
-}
-
-.org-item {
-    padding: 10px;
-    font-size: 13px;
-    font-weight: 600;
-}
-
-.org-footer {
-    margin-top: 20px;
-    padding-top: 15px;
-    border-top: 1px dashed #ddd;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* Image Card Styling */
-.image-card {
-    position: relative;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    padding: 20px 5px;
     border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-.main-photo { width: 100%; display: block; }
-.overlay {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 20px;
-    background: linear-gradient(transparent, rgba(0,0,0,0.9));
-    color: white;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
 }
 
-/* Footer */
+.node {
+    border: 1.5px solid #333;
+    padding: 6px 10px;
+    min-width: 110px;
+    text-align: center;
+    background: white;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.connector-v { width: 2px; height: 15px; background-color: #333; }
+
+.horizontal-line-wrapper { width: 60%; height: 2px; background-color: #333; }
+.horizontal-line-wrapper.wide { width: 85%; }
+
+.org-row-flex {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+}
+
+.node-group { display: flex; flex-direction: column; align-items: center; }
+.mt-10 { margin-top: 10px; }
+
+.sekbid-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.org-footer-text {
+    margin-top: 25px;
+    border-top: 1.5px solid #e63946;
+    padding-top: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+/* =========================================
+   5. FOOTER & KONTAK
+   ========================================= */
 .footer-bottom {
     margin-top: 60px;
     padding: 30px 0;
     border-top: 1px solid #eee;
-    text-align: left;
 }
 
 .school-name { font-weight: 800; font-size: 18px; margin-bottom: 10px; }
 .contact-info p { font-size: 14px; margin-bottom: 5px; color: #444; }
-.contact-info a { text-decoration: none; color: inherit; }
+.contact-info a { text-decoration: none; color: blue; }
 
-.dev-info {
-    margin-top: 30px;
-    padding-top: 10px;
-}
-.creator-tag {
-    font-size: 14px;
-    font-weight: bold;
-    color: #e63946; /* Dimas, saya beri warna merah agar namamu menonjol */
-}
+.dev-info { margin-top: 30px; border-top: 1px solid #f5f5f5; padding-top: 10px; }
+.creator-tag { font-size: 13px; font-weight: bold; color: #555; }
