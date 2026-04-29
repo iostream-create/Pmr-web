@@ -1,51 +1,230 @@
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
-body { background-color: #fff; overflow-x: hidden; color: #333; }
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
 
-/* Background Circles */
-.circle-top-right { position: fixed; top: -100px; right: -100px; width: 250px; height: 250px; background: #e63946; border-radius: 50%; z-index: -1; }
-.circle-bottom-left { position: fixed; bottom: -100px; left: -100px; width: 250px; height: 250px; background: #e63946; border-radius: 50%; z-index: -1; }
+body {
+    background-color: #ffffff;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
 
-.main-container { max-width: 450px; margin: 0 auto; padding: 20px; }
+/* Dekorasi Lingkaran Merah */
+.circle-top-right {
+    position: fixed;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background-color: #e63946;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.circle-bottom-left {
+    position: fixed;
+    bottom: -80px;
+    left: -80px;
+    width: 200px;
+    height: 200px;
+    background-color: #e63946;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* Animasi Fade In Page */
+.fade-in {
+    animation: fadeInEffect 1.5s ease-in-out;
+}
+
+@keyframes fadeInEffect {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Kontainer Utama */
+.main-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
 
 /* Header */
-.logo-section { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
-.pmi-logo { width: 40px; }
-.header-text { font-weight: bold; font-size: 14px; }
-.brand-title { font-size: 28px; font-weight: 900; line-height: 1.1; margin-top: 10px; }
+header {
+    margin-bottom: 40px;
+}
 
-/* Tentang Kami & Image */
-.section-container { margin-top: 30px; }
-.section-header { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; }
-.red-line { width: 40px; height: 4px; background: #e63946; }
-.image-card { position: relative; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.2); width: 100%; }
-.main-photo { width: 100%; height: auto; display: block; }
-.overlay { position: absolute; bottom: 0; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: #fff; padding: 15px; width: 100%; }
-.overlay h4 { font-size: 16px; }
-.overlay p { font-size: 10px; opacity: 0.9; }
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
 
-/* Cards Visi Misi */
-.cards-wrapper { display: flex; gap: 10px; }
-.card { flex: 1; background: #fff; padding: 15px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); font-size: 11px; }
-.highlight-text { color: #e63946; font-weight: bold; }
+.pmi-logo {
+    width: 35px;
+}
 
-/* BAGAN STRUKTUR (FIXED) */
-.bagan-container { display: flex; flex-direction: column; align-items: center; width: 100%; margin-top: 10px; }
-.node { border: 2px solid #333; padding: 8px; min-width: 120px; text-align: center; border-radius: 5px; font-size: 11px; font-weight: bold; background: white; }
-.node.mini { min-width: 100px; font-size: 10px; }
-.node.tiny { min-width: 80px; font-size: 9px; padding: 5px; }
-.line-v { width: 2px; height: 15px; background: #e63946; }
-.line-v-small { width: 2px; height: 10px; background: #e63946; }
-.line-h { width: 70%; height: 2px; background: #e63946; }
-.row-flex { display: flex; justify-content: space-between; width: 85%; }
-.side-col { display: flex; flex-direction: column; align-items: center; }
-.sekbid-grid { display: grid; grid-template-columns: repeat(4, 1fr); width: 100%; gap: 5px; }
-.sekbid-item { display: flex; flex-direction: column; align-items: center; }
+.header-text {
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.welcome-label {
+    font-style: italic;
+    font-size: 22px;
+    color: #333;
+}
+
+.brand-title {
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1;
+    margin-top: 5px;
+}
+
+/* Layout Section */
+.section-container {
+    margin-top: 40px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.section-header h3 {
+    font-weight: 800;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.red-line {
+    width: 40px;
+    height: 3px;
+    background-color: #e63946;
+}
+
+/* Gambar Tentang Kami */
+.image-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.main-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    color: white;
+}
+
+.overlay h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.overlay p {
+    font-size: 11px;
+    opacity: 0.8;
+}
+
+/* Visi Misi Cards */
+.cards-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+/* Animasi Khusus Visi Misi (Fade In + Scroll Down) */
+.slide-down {
+    animation: slideDownFade 1.5s ease-out forwards;
+}
+
+@keyframes slideDownFade {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card-title {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.plus-icon {
+    color: #e63946;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.highlight-text {
+    color: #e63946;
+    font-weight: bold;
+}
+
+.misi-list {
+    padding-left: 15px;
+}
+
+.misi-list li {
+    margin-bottom: 10px;
+}
 
 /* Footer */
-.footer-bottom { margin-top: 50px; padding: 20px 0; border-top: 1px solid #eee; font-size: 12px; }
-.footer-bottom a { color: #e63946; text-decoration: none; }
-.dev { margin-top: 15px; font-weight: bold; color: #777; }
+.footer-bottom {
+    margin-top: 60px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
 
-/* Animation */
-.fade-in { animation: fadeIn 1s; }
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.school-name {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.ig-handle {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.creator-tag {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
