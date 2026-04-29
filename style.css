@@ -36,7 +36,7 @@ body {
     z-index: -1;
 }
 
-/* Animasi Fade In Page */
+/* Animasi */
 .fade-in {
     animation: fadeInEffect 1.5s ease-in-out;
 }
@@ -46,124 +46,8 @@ body {
     to { opacity: 1; }
 }
 
-/* Kontainer Utama */
-.main-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 30px 20px;
-}
-
-/* Header */
-header {
-    margin-bottom: 40px;
-}
-
-.logo-section {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 30px;
-}
-
-.pmi-logo {
-    width: 35px;
-}
-
-.header-text {
-    font-size: 12px;
-    font-weight: bold;
-    line-height: 1.2;
-}
-
-.welcome-label {
-    font-style: italic;
-    font-size: 22px;
-    color: #333;
-}
-
-.brand-title {
-    font-size: 32px;
-    font-weight: 900;
-    line-height: 1;
-    margin-top: 5px;
-}
-
-/* Layout Section */
-.section-container {
-    margin-top: 40px;
-}
-
-.section-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 15px;
-}
-
-.section-header h3 {
-    font-weight: 800;
-    font-size: 18px;
-    white-space: nowrap;
-}
-
-.red-line {
-    width: 40px;
-    height: 3px;
-    background-color: #e63946;
-}
-
-/* Gambar Tentang Kami */
-.image-card {
-    position: relative;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-
-.main-photo {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.overlay {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 20px;
-    background: linear-gradient(transparent, rgba(0,0,0,0.9));
-    color: white;
-}
-
-.overlay h4 {
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-.overlay p {
-    font-size: 11px;
-    opacity: 0.8;
-}
-
-/* Visi Misi Cards */
-.cards-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-}
-
-.card {
-    background: white;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    font-size: 12px;
-    line-height: 1.4;
-}
-
-/* Animasi Khusus Visi Misi (Fade In + Scroll Down) */
 .slide-down {
-    animation: slideDownFade 1.5s ease-out forwards;
+    animation: slideDownFade 1.2s ease-out forwards;
 }
 
 @keyframes slideDownFade {
@@ -177,54 +61,104 @@ header {
     }
 }
 
-.card-title {
+/* Kontainer */
+.main-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* Header */
+header { margin-bottom: 40px; }
+.logo-section { display: flex; align-items: center; gap: 10px; margin-bottom: 30px; }
+.pmi-logo { width: 35px; }
+.header-text { font-size: 12px; font-weight: bold; line-height: 1.2; }
+.welcome-label { font-size: 22px; color: #333; font-style: italic; }
+.brand-title { font-size: 32px; font-weight: 900; line-height: 1; margin-top: 5px; }
+
+/* Sections */
+.section-container { margin-top: 40px; }
+.section-header { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; }
+.section-header h3 { font-weight: 800; font-size: 18px; }
+.red-line { width: 40px; height: 3px; background-color: #e63946; }
+
+/* Visi Misi & Organisasi */
+.highlight-text { color: #e63946; font-weight: bold; }
+.cards-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    font-size: 12px;
+}
+
+/* Gaya Struktur Organisasi */
+.org-wrapper {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.org-row {
     display: flex;
-    align-items: center;
-    gap: 5px;
-    color: #333;
-    margin-bottom: 10px;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 15px;
 }
 
-.plus-icon {
-    color: #e63946;
-    font-weight: bold;
-    font-size: 20px;
+.org-item {
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 600;
 }
 
-.highlight-text {
-    color: #e63946;
-    font-weight: bold;
+.org-footer {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px dashed #ddd;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.misi-list {
-    padding-left: 15px;
+/* Image Card Styling */
+.image-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
-
-.misi-list li {
-    margin-bottom: 10px;
+.main-photo { width: 100%; display: block; }
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    color: white;
 }
 
 /* Footer */
 .footer-bottom {
     margin-top: 60px;
+    padding: 30px 0;
     border-top: 1px solid #eee;
-    padding-top: 20px;
-    padding-bottom: 40px;
+    text-align: left;
 }
 
-.school-name {
-    font-weight: bold;
-    font-size: 16px;
-    margin-bottom: 5px;
-}
+.school-name { font-weight: 800; font-size: 18px; margin-bottom: 10px; }
+.contact-info p { font-size: 14px; margin-bottom: 5px; color: #444; }
+.contact-info a { text-decoration: none; color: inherit; }
 
-.ig-handle {
-    font-size: 14px;
-    margin-bottom: 20px;
+.dev-info {
+    margin-top: 30px;
+    padding-top: 10px;
 }
-
 .creator-tag {
     font-size: 14px;
     font-weight: bold;
-    color: #333;
+    color: #e63946; /* Dimas, saya beri warna merah agar namamu menonjol */
 }
