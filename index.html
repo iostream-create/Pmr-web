@@ -1,91 +1,227 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PMR WIRA SMKN 2 BARRU</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PMR UPT SMKN 2 Barru — Palang Merah Remaja</title>
+  <meta name="description" content="Website resmi Palang Merah Remaja (PMR) UPT SMKN 2 Barru. Belajar kemanusiaan, pertolongan pertama, dan kepemimpinan." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#beranda" class="brand">
+        <span class="brand-mark">+</span>
+        <div class="brand-text">
+          <strong>PMR</strong>
+          <small>UPT SMKN 2 Barru</small>
+        </div>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#beranda">Beranda</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#kegiatan">Kegiatan</a>
+        <a href="#struktur">Struktur</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Buka menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
 
-    <div class="circle-top-right"></div>
-    <div class="circle-bottom-left"></div>
+  <!-- HERO -->
+  <section id="beranda" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <span class="badge">Palang Merah Remaja</span>
+        <h1>Siaga, Peduli, dan <span class="text-gradient">Berkarya</span> untuk Sesama</h1>
+        <p>Selamat datang di laman resmi PMR UPT SMKN 2 Barru. Kami membentuk generasi muda yang tangguh, peduli, dan siap menolong dalam segala kondisi.</p>
+        <div class="hero-cta">
+          <a href="#kegiatan" class="btn btn-primary">Lihat Kegiatan</a>
+          <a href="#tentang" class="btn btn-outline">Tentang Kami</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="cross">+</div>
+          <h3>7 Prinsip Kepalangmerahan</h3>
+          <p>Kemanusiaan • Kesamaan • Kenetralan • Kemandirian • Kesukarelaan • Kesatuan • Kesemestaan</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <div class="main-container fade-in">
-        <header>
-            <div class="logo-section">
-                <img src="15001-removebg-preview.png" alt="Logo PMR" class="pmi-logo">
-                <div class="header-text">
-                    <p>PMR WIRA</p>
-                    <p>SMKN 2 BARRU</p>
-                </div>
-            </div>
-            <div class="welcome-text">
-                <p class="welcome-label">WELCOME TO</p>
-                <h1 class="brand-title">PMR WIRA UPT <br> SMKN 2 BARRU</h1>
-            </div>
-        </header>
+  <!-- TIGA PILAR -->
+  <section class="pillars">
+    <div class="container">
+      <h2 class="section-title">Tiga Pilar Karya</h2>
+      <p class="section-sub">Fondasi kegiatan PMR di sekolah kami.</p>
+      <div class="grid-3">
+        <article class="card">
+          <div class="card-icon">🩹</div>
+          <h3>Pertolongan Pertama</h3>
+          <p>Pelatihan dasar penanganan luka, evakuasi korban, dan tanggap kondisi darurat.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🤝</div>
+          <h3>Aksi Sosial</h3>
+          <p>Donor darah, bakti sosial, dan kegiatan peduli sesama di lingkungan sekolah dan masyarakat.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">⛑️</div>
+          <h3>Mitigasi Bencana</h3>
+          <p>Simulasi tanggap bencana, edukasi kesiapsiagaan, dan pelatihan kepemimpinan.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
-        <section class="section-container">
-            <div class="section-header">
-                <h3>TENTANG KAMI</h3>
-                <div class="red-line"></div>
-            </div>
-            <div class="image-card">
-                <img src="IMG-20260429-WA0022.jpg" alt="Kegiatan PMR" class="main-photo">
-                <div class="overlay">
-                    <h4>Kemanusiaan di Tangan Muda</h4>
-                    <p>Palang merah remaja, Mewujudkan siswa siswi yang bertanggung jawab dan berintegritas tinggi, dan menjadi ujung tombak kegiatan kemanusian.</p>
-                </div>
-            </div>
-        </section>
+  <!-- TENTANG -->
+  <section id="tentang" class="section section-alt">
+    <div class="container grid-2">
+      <div>
+        <h2 class="section-title">Tentang PMR Kami</h2>
+        <p>PMR UPT SMKN 2 Barru adalah organisasi siswa yang bernaung di bawah PMI. Kami menumbuhkan jiwa kemanusiaan, kepemimpinan, dan kepedulian sosial sejak usia remaja.</p>
+        <h3 class="mt">Visi</h3>
+        <p>Menjadi wadah pembentukan karakter remaja yang humanis, tangguh, dan bermanfaat bagi sesama.</p>
+        <h3 class="mt">Misi</h3>
+        <ul class="list">
+          <li>Melatih keterampilan pertolongan pertama dan kesehatan.</li>
+          <li>Menanamkan nilai kemanusiaan dan kesukarelaan.</li>
+          <li>Aktif dalam aksi sosial dan tanggap bencana.</li>
+        </ul>
+      </div>
+      <div class="info-box">
+        <h3>7 Prinsip Dasar</h3>
+        <ol class="list-ol">
+          <li>Kemanusiaan</li>
+          <li>Kesamaan</li>
+          <li>Kenetralan</li>
+          <li>Kemandirian</li>
+          <li>Kesukarelaan</li>
+          <li>Kesatuan</li>
+          <li>Kesemestaan</li>
+        </ol>
+      </div>
+    </div>
+  </section>
 
-        <section class="section-container">
-            <div class="section-header">
-                <h3>VISI & MISI</h3>
-                <div class="red-line"></div>
-            </div>
-            
-            <div class="cards-wrapper">
-                <div class="card slide-down">
-                    <div class="card-title">
-                        <span class="plus-icon">+</span>
-                        <h4>VISI</h4>
-                    </div>
-                    <p>Menjadi wadah pembinaan remaja, <span class="highlight-text">yang unggul dalam pelayanan kemanusiaan</span> ,dan menjadi pelopor kesehatan bagi teman sebaya.</p>
-                </div>
+  <!-- KEGIATAN -->
+  <section id="kegiatan" class="section">
+    <div class="container">
+      <h2 class="section-title">Kegiatan Kami</h2>
+      <p class="section-sub">Beragam aktivitas untuk membangun karakter dan keterampilan.</p>
+      <div class="grid-3">
+        <div class="activity">
+          <div class="grid-3">
+  <div class="activity">
+    <div class="activity-img" style="background-image: url('IMG-20260430-WA0007.jpg'); background-size: cover; background-position: center;">Pelatihan</div>
+    <h3>Pelatihan Rutin</h3>
+    <p>Latihan pertolongan pertama dan keterampilan PMR setiap minggu.</p>
+  </div>
 
-                <div class="card slide-down">
-                    <div class="card-title">
-                        <h4>MISI</h4>
-                    </div>
-                    <ul class="misi-list">
-                        <li>Misi Mengamalkan 7 prinsip dasar <span class="highlight-text">palang merah dan bulan sabit merah</span> internasional di kehidupan sehari hari.</li>
-                        <li> <span class="highlight-text">Meningkatkan pertolongan pertama dan </span> kesehatan bagi seluruh anggota dan siswa-siswi.</li>
-                        <li>Menciptakan lingkungan sekolah <span class="highlight-text">yang </span> sehat.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+  <div class="activity">
+    <div class="activity-img" style="background-image: url('IMG-20260429-WA0022.jpg'); background-size: cover; background-position: center;">Bakti Sosial</div>
+    <h3>Aksi Sosial</h3>
+    <p>Donor darah, Petugas kesehatan upacara, Tim penolong siswa.</p>
+  </div>
 
-        <footer class="footer-bottom">
-            <p class="school-name">Palang Merah Remaja SMKN 2 Barru</p>
-            <p class="handle">Instagram : 
-    <a href="https://www.instagram.com/pmr_smkn2.barru/" target="_blank" style="text-decoration: none; color: inherit;">
+  <div class="activity">
+    <div class="activity-img" style="background-image: url('IMG-20260430-WA0002.jpg'); background-size: cover; background-position: center;">Outdoor&Indoor</div>
+    <h3>Kegiatan </h3>
+    <p>Mengikuti kegiatan Outdoor&Indoor pmr UPT SMKN 2 BARRU.</p>
+  </div>
+</div>
+    </div>
+  </section>
+
+  <!-- STRUKTUR -->
+  <section id="struktur" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Struktur Organisasi</h2>
+      <p class="section-sub">Pengurus PMR UPT SMKN 2 Barru periode aktif.</p>
+      <div class="grid-4">
+        <div class="member"><div class="avatar">PB</div><strong>Pembina</strong><small> Guru Pembina PMR</small></div>
+        <div class="member"><div class="avatar">KT</div><strong>Ketua</strong><small> Nama Siswa</small></div>
+        <div class="member"><div class="avatar">WK</div><strong>Wakil Ketua</strong><small> Nama Siswa</small></div>
+        <div class="member"><div class="avatar">SK</div><strong>Sekretaris</strong><small> Nama Siswa</small></div>
+        <div class="member"><div class="avatar">BD</div><strong>Bendahara</strong><small> Nama Siswa</small></div>
+        <div class="member"><div class="avatar">S1</div><strong>S1.Keterampilan hidup sehat</strong><small> Nama Siswa</small></div>
+        <div class="member"><div class="avatar">S2</div><strong>S2.Pertemanan</strong><small> Nama Siswa</small></div>
+        <div class="member"><div class="avatar">S3</div><strong>S3.Humas</strong><small> Nama Siswa</small></div>
+        <div class="member"><div class="avatar">S4</div><strong>S4.Kesehatan</strong><small> Nama Siswa</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAK -->
+  <section id="kontak" class="section">
+    <div class="container grid-2">
+      <div>
+        <h2 class="section-title">Hubungi Kami</h2>
+        <p>Tertarik bergabung atau ingin berkolaborasi? Kirim pesan kepada kami.</p>
+        <ul class="contact-list">
+          <li><strong>Alamat:</strong> UPT SMKN 2 Barru, Sulawesi Selatan, Kabupaten Barru</li>
+          <li><strong>Email:</strong> pmrsmkn.2barru@gmail.com</li>
+          <li><strong>Instagram:</strong> @pmr_smkn2.barru</li>
+        </ul>
+      </div>
+      <form class="form" id="contactForm">
+        <label>Nama<input type="text" name="nama" required /></label>
+        <label>Email<input type="email" name="email" required /></label>
+        <label>Pesan<textarea name="pesan" rows="4" required></textarea></label>
+        <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+        <p class="form-status" id="formStatus"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="brand">
+          <span class="brand-mark">+</span>
+          <div class="brand-text"><strong>PMR</strong><small>UPT SMKN 2 Barru</small></div>
+        </div>
+        <p class="muted">Siaga, Peduli, Berkarya.</p>
+      </div>
+      <div>
+        <h4>Tautan</h4>
+        <ul class="footer-links">
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#kegiatan">Kegiatan</a></li>
+          <li><a href="#struktur">Struktur</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontak</h4>
+        <a href="https://www.instagram.com/pmr_smkn2.barru/" target="_blank" style="text-decoration: none; color: inherit;">
         <strong>@pmr_smkn2.barru</strong>
     </a>
 </p>
-
-
-            <p class="kontak">Nurfaiz Roihana : 
+        <p class="kontak">Nurfaiz Roihana : 
     <a href="https://wa.me/6283132281793" target="_blank" style="text-decoration: none; color: inherit;">
         <strong>0831-3228-1793</strong>
     </a>
+        </p>
+
+        
+       <br> 
+<p class="creator">
+  WebDev -<a href="https://iostream-create.github.io/My-web/" target="_blank" style="text-decoration: none; color: inherit;">Dimas Aksa oktapian</a>
 </p>
 
-            <br> <p class="creator-tag">Web Dev -Dimas Aksa oktapian</p>
-        </footer>
+      </div>
     </div>
+    <div class="footer-bottom">© <span id="year"></span> PMR UPT SMKN 2 Barru. All rights reserved.</div>
+  </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
+HTML
+echo "index.html"
